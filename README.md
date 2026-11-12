@@ -5,7 +5,7 @@ the trends shaping a lower-carbon future. It is built with **Next.js** and uses 
 headless CMS, so the content can be edited without touching the code.
 
 - **Live site:** _add your Vercel URL here_
-- **Prismic repository:** _add your repository URL here_ (`https://<repo-name>.prismic.io`)
+- **Prismic repository:** [ecobytes-miniblog.prismic.io](https://ecobytes-miniblog.prismic.io)
 
 ## Features
 
@@ -75,7 +75,8 @@ published after the build is generated on its first visit and then cached.
 
 **Updating content.** When an editor publishes in Prismic, a webhook calls `/api/revalidate`, which
 expires the cached content (the `prismic` cache tag). The next visitor triggers a rebuild of the
-affected pages. In development, the cache only lasts a few seconds, so changes show up on reload.
+affected pages. In development, the cache refreshes after about a minute, so changes show up shortly after
+publishing.
 
 **Responsive and accessible.** Layouts are mobile-first with Tailwind; text colours meet WCAG AA
 contrast; there is a skip link, visible keyboard focus, `aria-current` in the navigation, and alt
@@ -185,7 +186,8 @@ make the changes and publish.
   with a calm green palette.
 - **Day 3: testing and optimisation.** Checked the pages on mobile, tablet and desktop; checked
   keyboard navigation and colour contrast; added metadata, sitemap, robots.txt and structured data;
-  set up static generation and on-demand revalidation; deployed to Vercel.
+  set up static generation and on-demand revalidation; production build passes with every page
+  prerendered as static HTML.
 
 ## Possible next steps
 

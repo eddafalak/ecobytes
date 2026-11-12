@@ -5,8 +5,8 @@ import { createClient } from "@/prismicio";
 // All content is fetched through these cached functions ("use cache"), so pages are generated
 // statically at build time and served from the cache afterwards. Every entry is tagged "prismic":
 // when an editor publishes in Prismic, its webhook calls /api/revalidate, which expires that tag
-// and the pages rebuild with the new content. In development the cache only lasts seconds, so
-// published changes show up on reload.
+// and the pages rebuild with the new content. In development the cache refreshes after about a
+// minute, so published changes show up shortly after.
 
 /** Newest first: by publication date, falling back to when the article was first published. */
 const newestFirst = [
@@ -52,7 +52,7 @@ export async function getArticle(uid: string) {
 /** Gives the current cached function its lifetime and the "prismic" tag. */
 function prismicCache() {
   if (process.env.NODE_ENV === "production") cacheLife("days");
-  else cacheLife("seconds");
+  else cacheLife("minutes"); // "seconds" would be too short to prerender
   cacheTag("prismic");
 }
 
