@@ -4,7 +4,7 @@ EcoBytes is a mini blog about sustainable technology: green computing, eco-frien
 the trends shaping a lower-carbon future. It is built with **Next.js** and uses **Prismic** as a
 headless CMS, so the content can be edited without touching the code.
 
-- **Live site:** _add your Vercel URL here_
+- **Live site:** https://ecobytes-three.vercel.app
 - **Prismic repository:** [ecobytes-miniblog.prismic.io](https://ecobytes-miniblog.prismic.io)
 
 ## Features
