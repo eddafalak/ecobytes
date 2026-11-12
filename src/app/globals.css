@@ -1,26 +1,27 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* EcoBytes colours: a calm, natural palette. Text colours meet WCAG AA contrast on `paper`. */
+@theme {
+  --color-paper: #f6f4ee;   /* page background */
+  --color-white: #ffffff;   /* cards */
+  --color-ink: #1b1f1c;     /* main text */
+  --color-stone: #5c605a;   /* secondary text (6.0:1 on paper) */
+  --color-line: #dedbd2;    /* borders and dividers */
+  --color-forest: #1f3d2b;  /* dark surfaces, headings accent */
+  --color-moss: #2f6b45;    /* links and buttons (5.9:1 on paper) */
+  --color-leaf: #8cc084;    /* decorative accent */
+  --color-mint: #e3eedf;    /* tags, soft highlights */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+/* Keyboard focus is always visible. */
+:focus-visible {
+  outline: 2px solid var(--color-moss);
+  outline-offset: 3px;
 }

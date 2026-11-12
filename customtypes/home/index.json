@@ -1,0 +1,64 @@
+{
+  "id": "home",
+  "label": "Homepage",
+  "format": "page",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "headline": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Headline",
+          "placeholder": "Big statement at the top of the homepage",
+          "single": "heading1"
+        }
+      },
+      "intro": {
+        "type": "Text",
+        "config": {
+          "label": "Intro",
+          "placeholder": "A sentence under the headline"
+        }
+      },
+      "hero_image": {
+        "type": "Image",
+        "config": {
+          "label": "Hero image",
+          "constraint": {
+            "width": 1600,
+            "height": 900
+          },
+          "thumbnails": []
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Meta title",
+          "placeholder": "Shown in the browser tab and search results (falls back to the title)"
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Meta description",
+          "placeholder": "One or two sentences for search results (falls back to the summary)"
+        }
+      },
+      "meta_image": {
+        "type": "Image",
+        "config": {
+          "label": "Meta image",
+          "constraint": {
+            "width": 1200,
+            "height": 630
+          },
+          "thumbnails": []
+        }
+      }
+    }
+  }
+}

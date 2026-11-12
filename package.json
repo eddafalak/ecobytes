@@ -6,20 +6,30 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "slicemachine": "start-slicemachine",
+    "types": "prismic-ts-codegen",
+    "typecheck": "tsc --noEmit",
+    "seed": "node --env-file=.env.local scripts/seed.mjs"
   },
   "dependencies": {
+    "@prismicio/client": "^7.23.1",
+    "@prismicio/next": "^3.0.0",
+    "@prismicio/react": "^3.5.1",
     "next": "16.4.6",
     "react": "19.3.0",
     "react-dom": "19.3.0"
   },
   "devDependencies": {
+    "@slicemachine/adapter-next": "^0.3.100",
     "@tailwindcss/turbopack": "4.3.3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.4.6",
+    "prismic-ts-codegen": "^0.1.31",
+    "slice-machine-ui": "^2.21.6",
     "tailwindcss": "4.3.3",
     "typescript": "^5"
   }

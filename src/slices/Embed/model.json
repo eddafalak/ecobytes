@@ -1,0 +1,33 @@
+{
+  "id": "embed",
+  "type": "SharedSlice",
+  "name": "Embed",
+  "description": "A YouTube/Vimeo video or a social media post (paste the URL)",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "A YouTube/Vimeo video or a social media post (paste the URL)",
+      "imageUrl": "",
+      "primary": {
+        "embed": {
+          "type": "Embed",
+          "config": {
+            "label": "Embed URL",
+            "placeholder": "Paste a YouTube, Vimeo, X, Instagram… link"
+          }
+        },
+        "caption": {
+          "type": "Text",
+          "config": {
+            "label": "Caption",
+            "placeholder": "Optional caption"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
