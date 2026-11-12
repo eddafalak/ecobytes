@@ -92,7 +92,8 @@ Requirements: Node.js 20 or newer and a free [Prismic](https://prismic.io) accou
    npm install
    ```
 
-2. **Create a Prismic repository** at [prismic.io/dashboard](https://prismic.io/dashboard) (   Next.js, "start from scratch"). Put its name in `slicemachine.config.json` as `repositoryName`.
+2. **Create a Prismic repository** at [prismic.io/dashboard](https://prismic.io/dashboard) (pick Next.js if asked).
+   Put its name in `slicemachine.config.json` as `repositoryName`.
 
 3. **Push the content model to Prismic.** Start Slice Machine, log in when asked, and press
    **Push** in the top-right corner. This creates the Article, Homepage and About page types and
